@@ -19,11 +19,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             NavigationJetpackComposeTheme {
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
 
                     navController = rememberNavController()
+                    SetupNavigation(navController = navController)
 
                 }
             }
