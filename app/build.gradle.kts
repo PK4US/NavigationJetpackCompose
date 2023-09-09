@@ -5,12 +5,13 @@ plugins {
 
 android {
     namespace = "com.pk4us.navigationjetpackcompose"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.pk4us.navigationjetpackcompose"
         minSdk = 26
-        targetSdk = 33
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
