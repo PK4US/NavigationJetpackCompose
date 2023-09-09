@@ -1,5 +1,6 @@
 package com.pk4us.navigationjetpackcompose
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
@@ -10,13 +11,18 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(navController: NavController) {
     Box(modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ){
-        Text(text = "Home",
+        Text(
+            modifier = Modifier.clickable(){
+                navController.navigate(route = Screen.Detail.route)
+            },
+            text = "Home",
             color = Color.Blue,
             fontSize = 50.sp,
             fontWeight = FontWeight.Bold

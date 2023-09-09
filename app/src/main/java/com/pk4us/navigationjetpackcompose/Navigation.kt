@@ -16,7 +16,13 @@ fun SetupNavigation(
         composable(
             route = Screen.Home.route
         ){
-            HomeScreen()
+            HomeScreen(navController = navController)
+        }
+
+        composable(
+            route = Screen.Detail.route
+        ){
+            DetailScreen()
         }
     }
 }
