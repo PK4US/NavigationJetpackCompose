@@ -8,20 +8,23 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.pk4us.navigationjetpackcompose.ui.theme.NavigationJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
+
+    lateinit var navController: NavHostController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             NavigationJetpackComposeTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-
+                    navController = rememberNavController()
 
                 }
             }
