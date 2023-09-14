@@ -19,7 +19,7 @@ fun HomeScreen(navController: NavController) {
     ){
         Text(
             modifier = Modifier.clickable(){
-                navController.navigate(route = Screen.Detail.passId()
+                navController.navigate(route = Screen.Detail.passNaneAndId(id = 123456, name = "MyTEXT")
                 )
             },
             text = "Home",

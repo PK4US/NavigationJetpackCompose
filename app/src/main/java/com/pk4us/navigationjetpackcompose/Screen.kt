@@ -5,9 +5,15 @@ const val DETAIL_ARGUMENT_KEY2 = "name"
 
 sealed class Screen(val route:String){
     object Home:Screen(route = "home_screen")
-    object Detail:Screen(route = "detail_screen?={id}"){
-        fun passId(id:Int = 0):String{
-            return "detail_screen?id=$id"
+    object Detail:Screen(route = "detail_screen?id={$DETAIL_ARGUMENT_KEY}&name={$DETAIL_ARGUMENT_KEY2}"){
+//        fun passId(id:Int = 0):String{
+//            return "detail_screen?id=$id"
+//        }
+        fun passNaneAndId(
+            id: Int = 0,
+            name: String = "test-text"
+        ):String{
+            return "detail_screen?id=$id&name=$name"
         }
     }
 }
